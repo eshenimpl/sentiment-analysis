@@ -1,0 +1,55 @@
+$secondary-color: #9f91cc;
+$btn-color: #5c4b99;
+
+form {
+  width: 80%;
+  margin: 10px auto;
+  #error-holder {
+    margin: 5px;
+    color: #fb5607;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+input {
+  border-radius: 3px;
+  padding: 10px 10px;
+  width: 100%;
+  // height: 12vh;
+  line-height: 16px;
+  font-size: 20px;
+  margin: 10px 0;
+  &[type="submit"] {
+    background-color: $btn-color;
+    color: white;
+    font-size: 26px;
+    font-family: "Oswald", sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+    cursor: pointer;
+    width: 100%;
+    height: 8vh;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 10px auto;
+  color: white;
+  table {
+    border-collapse: collapse;
+
+    td {
+      height: 30px;
+      // border: 1px solid black;
+      &.attribute {
+        width: 20px;
+        padding-right: 10px;
+      }
+      &.result {
+        width: 90%;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  background: linear-gradient(
+      115deg,
+      rgba(58, 35, 102, 0.7),
+      rgba(136, 136, 206, 0.4)
+    ),
+    url(../images/bg.jpg) no-repeat fixed;
+
+  background-size: cover;
+
+  main {
+    width: 70%;
+    margin: 20px auto;
+    background-color: rgba(27, 27, 50, 0.8);
+    border-radius: 5px;
+    padding: 10px;
+    @media (max-width: 768px) {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+}

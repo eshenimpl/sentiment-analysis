@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analysis</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>News Article Sentiment Analysis with NLP</h1>
+      <section>
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <input
+            id="input"
+            type="text"
+            name="input"
+            value=""
+            placeholder="Input the text or URL you want to evaluate here"
+            required
+          />
+          <input
+            type="submit"
+            name=""
+            value="submit"
+            onclick="return Client.handleSubmit(event)"
+            onsubmit="return Client.handleSubmit(event)"
+          />
+          <div id="error-holder"></div>
+        </form>
+      </section>
+
+      <section class="container">
+        <h2>Sentiment Analysis Results:</h2>
+        <div id="results">
+          <table>
+            <tr>
+              <td class="attribute">Polarity:</td>
+              <td class="result" id="score_tag"></td>
+            </tr>
+            <tr>
+              <td class="attribute">Agreement:</td>
+              <td class="result" id="agreement"></td>
+            </tr>
+            <tr>
+              <td class="attribute">Subjectivity:</td>
+              <td class="result" id="subjectivity"></td>
+            </tr>
+            <tr>
+              <td class="attribute">Confidence:</td>
+              <td class="result" id="confidence"></td>
+            </tr>
+            <tr>
+              <td class="attribute">Irony:</td>
+              <td class="result" id="irony"></td>
+            </tr>
+            <tr>
+              <td class="attribute">Text Snippet:</td>
+              <td class="result" id="text_snippet"></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Powered By - MeaningCloud Sentiment Analysis API</p>
+    </footer>
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>
